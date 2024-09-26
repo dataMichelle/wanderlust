@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Wanderlust Adventures</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div id="logo"><img src="img/logo.png" alt="Wanderlust Adventures Logo"/></div>
+        <div id="menu">
+            <a href="index.html">Home</a>
+            <a href="about_us.html">About Us</a>
+            <a href="contact_us.html">Contact Us</a>
+        </div>
+    </nav>
+    <main>
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="#" method="post" onsubmit="return showThankYouMessage()">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Comments:</label>
+                    <textarea id="comments" name="comments" rows="5" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media-footer">
+            <h2>Connect with us</h2>
+            <div class="social-media-icons">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="./img/facebook_icon.png" alt="Facebook">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="./img/instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                    <img src="./img/linkedin_icon.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </footer>
+    <div id="thankYouMessage" class="popup-message">
+        <p>Thank you for contacting us. We have received your message and will be in touch soon!</p>
+        <button onclick="closeThankYouMessage()">Close</button>
+    </div>
+    <script src="travel_recommendation.js"></script>
+    <script>
+        function showThankYouMessage() {
+            document.getElementById('thankYouMessage').style.display = 'block';
+            return false; // Prevent the form from submitting for demonstration purposes
+        }
+
+        function closeThankYouMessage() {
+            document.getElementById('thankYouMessage').style.display = 'none';
+            document.getElementById('contactForm').reset(); // Reset the form fields
+        }
+    </script>
+</body>
+</html>

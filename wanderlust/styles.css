@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#welcome_text {
+    font-family: 'Roboto', sans-serif;
+}
+
+.roboto-regular {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #090909;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FBFCD9;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+#destinationInput {
+    width: 200px;
+    height: 2rem;
+}
+
+/* Button styles */
+button {
+    height: 2rem;
+    text-align: center;
+    background-color: #5D7742;
+    color: white;
+    padding: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 0.5em;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Body styles */
+main {
+    background-image: url("./img/background.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    padding: 20px;
+    flex: 1;
+}
+
+/* Specific styles for travel_recommendation.html */
+#travel-main-content {
+    flex: 2;
+    width: 66.67%;
+    padding: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro_text, #welcome_text, .about-us, .contact-us {
+    background-color: #FBFCD9;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#travel-main-content .intro_text, #travel-main-content #welcome_text {
+    margin-bottom: 40px;
+}
+
+#travel-main-content .intro_text h1 {
+    font-size: 3rem;
+    margin: 0.5rem 0;
+    text-indent: 0;
+}
+
+#travel-main-content .intro_text h1:nth-child(2) {
+    text-indent: 20px;
+}
+
+#travel-main-content .intro_text h1:nth-child(3) {
+    text-indent: 40px;
+}
+
+#travel-main-content #welcome_text h2, .about-us h2, .contact-us h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+#travel-main-content #welcome_text p, .about-us p, .contact-us p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+/* About Us Section */
+
+.about-us {
+    width: 80%;
+    margin: 0 auto;
+}
+.about-us .team {
+    text-align: center;
+}
+
+.about-us .team h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-card {
+    background-color: #FBFCD9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+    border-radius: 50%;
+    width: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Contact Us Page  */
+
+.contact-us {
+    width: 80%;
+    margin: 0 auto;
+}
+.contact-us .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-us .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-us .form-group input,
+.contact-us .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-us .form-group textarea {
+    resize: vertical;
+}
+
+/* Recommendations Section */
+.recommendations {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 350px;
+}
+
+.recommendation-card {
+    background-color: #FBFCD9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommendation-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.recommendation-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.recommendation-card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* No Recommendations Message */
+.no-recommendations-message {
+    background-color: #FBFCD9;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* Popup Message Styles */
+.popup-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FBFCD9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+
+.popup-message p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.popup-message button {
+    background-color: #5D7742;
+    color: white;
+    padding: 10px 20px;
+}
+
+/* Sticky Footer */
+footer {
+    background-color: #000;
+    color: #FBFCD9;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    bottom: 0;
+}
+
+.social-media-footer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.social-media-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-media-icons img {
+    width: 30px;
+    height: 30px;
+}
